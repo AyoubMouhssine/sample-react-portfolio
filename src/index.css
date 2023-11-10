@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+:root {
+  --darkBlue: #03045e;
+  --darkBrown: #474306;
+  --yellow: #f5ee84;
+  --lightYellow: #fbf8cc;
+  --ligherYellow: #f7f197;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkBlue);
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--lightYellow);
+  padding: 0 150px;
+  color: var(--darkBlue);
+}
+
+/* scroll bar */
+
+body {
+  --sb-track-color: #fbf8cc;
+  --sb-thumb-color: #fbf8cc;
+  --sb-size: 10px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+header {
+  /* border: 1px solid red; */
+  height: 60px;
+  line-height: 60px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header nav ul li {
+  padding-left: 30px;
+}
+
+/* main */
+main {
+  min-height: 500px;
+}
+
+main.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main.home .description span {
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+main.home .description h2 {
+  line-height: 80px;
+  font-weight: 800;
+  font-size: 70px;
+}
+
+main.home .description button {
+  display: block;
+  width: 100px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: var(--yellow);
+  color: var(--darkBrown);
+  border: none;
+  font-size: 14px;
+  border-radius: 10px;
+}
+main.home .image {
+  width: 400px;
+  height: 409px;
+}
+
+main.home .image img {
+  width: 100%;
+  height: 100%;
+}
+/* about */
+
+main.work,
+main.about {
+  padding-top: 20px;
+}
+
+main.work h2,
+main.about h2 {
+  line-height: 80px;
+  height: 80px;
+  color: var(--ligherYellow);
+  font-weight: 800;
+  font-size: 50px;
+}
+
+main.work p,
+main.about p {
+  width: 600px;
+  margin-top: 10px;
+  line-height: 25px;
+  color: var(--darkBlue);
+}
+
+main.about ul {
+  margin-left: 180px;
+  margin-top: 100px;
+}
+
+main.about ul li {
+  margin-bottom: 80px;
+}
+
+/* work */
+main.work img,
+main.work span {
+  display: block;
+}
+main.work .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 90px;
+}
+
+main.work .cards .card img {
+  width: 100%;
+  height: 200px;
+}
+
+main.work .cards .card {
+  width: 350px;
+}
+
+main.work .cards .card span.image-date {
+  margin-top: 5px;
+}
+main.work .cards .card .info h3 {
+  margin-top: 10px;
+}
+
+main.work .cards .card .info p {
+  width: fit-content;
+  font-size: 14px;
+}
+
+main.work h2:last-of-type {
+  margin-top: 80px;
+}
+
+main.work .contact {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-bottom: 50px;
+  gap: 140px;
+  margin-top: 20px;
+}
+
+main.work .contact .contact-image {
+  width: 300px;
+  height: 200px;
+}
+
+main.work .contact .contact-image img {
+  width: 100%;
+  height: 100%;
+}
+
+main.work .contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main.work .contact .contact-info p {
+  width: 440px;
+  line-height: 30px;
+}
+main.work .contact .contact-info ul {
+  list-style: none;
+}
+
+main.work .contact .contact-info ul li {
+  margin-bottom: 10px;
+}
