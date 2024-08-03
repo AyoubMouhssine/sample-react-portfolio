@@ -30,7 +30,7 @@ export default function Home() {
         </button>
       </div>
       <div className="image">
-        <img src={home_image} alt="image d'accueil" />
+        <img src={home_image} alt="image of ayoub mouhssine for portfolio" />
       </div>
     </main>
   );
