@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
 :root {
   --darkBlue: #03045e;
   --darkBrown: #474306;
@@ -22,7 +22,7 @@ a {
 
 html {
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -56,36 +56,110 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-  /* border: 1px solid red; */
-  height: 60px;
-  line-height: 60px;
+  height: auto;
+  padding: 15px 0;
 }
+
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+header nav h3 {
+  font-size: 24px;
+  margin-right: 20px;
 }
 
 header nav ul {
   display: flex;
   list-style: none;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 header nav ul li {
-  padding-left: 30px;
+  padding: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--darkBlue);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--yellow);
+}
+
+header nav .icons {
+  display: flex;
+  gap: 15px;
+}
+
+header nav .icons li a {
+  font-size: 20px;
+  color: var(--darkBlue);
+  transition: color 0.3s ease;
+}
+
+header nav .icons li a:hover {
+  color: var(--yellow);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header nav h3 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  header nav ul {
+    margin: 10px 0;
+  }
+
+  header nav ul li {
+    padding: 0 10px;
+  }
+
+  header nav .icons {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul li {
+    padding: 5px 0;
+  }
 }
 
 /* main */
-main {
-  min-height: 500px;
-}
 
 main.home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 50px 0;
+  gap: 40px;
+}
+
+main.home .description {
+  flex: 1;
+  max-width: 600px;
 }
 
 main.home .description span {
@@ -96,9 +170,17 @@ main.home .description span {
 }
 
 main.home .description h2 {
-  line-height: 80px;
+  line-height: 1.2;
   font-weight: 800;
-  font-size: 70px;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+main.home .description .welcome-paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px 0;
+  color: var(--darkBrown);
 }
 
 main.home .description button {
@@ -111,15 +193,96 @@ main.home .description button {
   border: none;
   font-size: 14px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+main.home .description button:hover {
+  background-color: var(--ligherYellow);
+}
+
 main.home .image {
-  width: 400px;
-  height: 409px;
+  flex: 1;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main.home .image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    padding: 0 50px;
+  }
+
+  main.home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main.home .description {
+    max-width: 100%;
+  }
+
+  main.home .description h2 {
+    font-size: 50px;
+  }
+
+  main.home .description button {
+    margin: 20px auto 0;
+  }
+
+  main.home .image {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 30px;
+  }
+
+  main.home .description h2 {
+    font-size: 40px;
+  }
+
+  main.home .image {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0 20px;
+  }
+
+  main.home .description h2 {
+    font-size: 32px;
+  }
+
+  main.home .description span,
+  main.home .description .welcome-paragraph {
+    font-size: 14px;
+  }
+
+  main.home .image {
+    max-width: 250px;
+  }
 }
 /* about */
 
@@ -129,12 +292,18 @@ main.about {
 }
 
 main.work h2,
-main.about h2 {
+main.about h2,
+main.contact h2,
+main.experience h2 {
   line-height: 80px;
   height: 80px;
   color: var(--ligherYellow);
   font-weight: 800;
   font-size: 50px;
+  /**/
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 main.work p,
@@ -147,11 +316,15 @@ main.about p {
 
 main.about ul {
   margin-left: 180px;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 main.about ul li {
   margin-bottom: 80px;
+}
+
+main.about .formation {
+  margin-top: 30px;
 }
 
 /* work */
@@ -193,39 +366,198 @@ main.work h2:last-of-type {
   margin-top: 80px;
 }
 
-main.work .contact {
-  display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-  margin-bottom: 50px;
-  gap: 140px;
-  margin-top: 20px;
+/*contact*/
+
+main.contact {
+  padding: 20px;
 }
 
-main.work .contact .contact-image {
+main.contact .contact-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+main.contact .contact-image {
+  flex-shrink: 0;
   width: 300px;
   height: 200px;
 }
 
-main.work .contact .contact-image img {
+main.contact .contact-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-main.work .contact .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+main.contact .contact-details {
+  flex-grow: 1;
+  max-width: 500px;
 }
 
-main.work .contact .contact-info p {
-  width: 440px;
-  line-height: 30px;
+main.contact .contact-details p {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
-main.work .contact .contact-info ul {
+
+main.contact .contact-details ul {
   list-style: none;
+  padding: 0;
 }
 
-main.work .contact .contact-info ul li {
+main.contact .contact-details ul li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+main.contact .contact-details ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+main.contact .contact-details ul li a:hover {
+  text-decoration: underline;
+}
+
+main.contact .contact-details ul li a svg,
+main.contact .contact-details ul li svg {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  main.contact .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main.contact .contact-image {
+    width: 100%;
+    height: auto;
+  }
+
+  main.contact .contact-details {
+    width: 100%;
+  }
+
+  main.contact .contact-details p {
+    text-align: center;
+  }
+
+  main.contact .contact-details ul {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  main.contact {
+    padding: 10px;
+  }
+
+  main.contact .contact-details p {
+    font-size: 14px;
+  }
+
+  main.contact .contact-details ul li a {
+    font-size: 14px;
+  }
+}
+
+/*experience*/
+main.experience {
+  padding: 20px;
+}
+
+main.experience h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.experience-item span {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.experience-item ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.experience-item ul li {
+  margin-bottom: 5px;
+}
+
+.experience-item ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.experience-item ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  main.experience {
+    padding: 10px;
+  }
+
+  main.experience h2 {
+    font-size: 1.5em;
+  }
+
+  .experience-item h3 {
+    font-size: 1.1em;
+  }
+
+  .experience-item span {
+    font-size: 0.85em;
+  }
+
+  .experience-item ul {
+    padding-left: 15px;
+  }
+
+  .experience-item ul li {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  main.experience {
+    padding: 5px;
+  }
+
+  main.experience h2 {
+    font-size: 1.2em;
+  }
+
+  .experience-item h3 {
+    font-size: 1em;
+  }
+
+  .experience-item span {
+    font-size: 0.8em;
+  }
+
+  .experience-item ul {
+    padding-left: 10px;
+  }
+
+  .experience-item ul li {
+    font-size: 0.85em;
+  }
 }
