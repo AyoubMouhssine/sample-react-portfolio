@@ -1,13 +1,13 @@
 import left_image from "../images/left-image.jpg";
 import right_image from "../images/right-image.jpg";
-const projects = [{ name: "", description: "", created_at: "" }];
+// const projects = [{ name: "", description: "", created_at: "" }];
 export default function Work() {
   return (
     <main className="work">
       <h2>Projets</h2>
       <div className="cards">
         <div className="card">
-          <img src={left_image} alt="image" />
+          <img src={left_image} alt="projets" />
           <span className="image-date">November 24, 2019</span>
           <div className="info">
             <h3>Some Case Study</h3>
@@ -19,7 +19,7 @@ export default function Work() {
           </div>
         </div>
         <div className="card">
-          <img src={right_image} alt="image" />
+          <img src={right_image} alt="projets" />
           <span className="image-date">November 24, 2019</span>
           <div className="info">
             <h3>Lorem ipsum dolor</h3>

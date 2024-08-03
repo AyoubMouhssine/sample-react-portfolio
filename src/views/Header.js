@@ -36,12 +36,17 @@ const Header = () => {
             <a
               href="https://www.facebook.com/ayoub.mouhssine.75"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
           <li>
-            <a href="https://github.com/AyoubMouhssine" target="_blank">
+            <a
+              href="https://github.com/AyoubMouhssine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
@@ -49,6 +54,7 @@ const Header = () => {
             <a
               href="https://www.linkedin.com/in/ayoubMouhssine"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
