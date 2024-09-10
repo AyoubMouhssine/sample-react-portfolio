@@ -1,4 +1,15 @@
-# sample-react-app
+# My Portfolio
+
+## Description
+
+This project is a personal portfolio website built with React. It showcases my skills, projects, and professional experience in a modern, responsive web application.
+
+## Technologies Used
+
+- React 18.2.0
+- React Router 6.18.0
+- Font Awesome (for icons)
+- Normalize.css (for consistent styling across browsers)
 
 ## Attribution
 
