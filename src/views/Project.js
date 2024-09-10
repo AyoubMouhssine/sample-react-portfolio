@@ -12,13 +12,17 @@ const Project = ({ project }) => {
         <div className="card-footer">
           <div className="card-footer__links">
             {project.website && (
-              <a href={project.github} target="_blank">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button>
                   <FontAwesomeIcon icon={faGithub} /> Github
                 </button>
               </a>
             )}
-            <a href={project.website} target="_blank">
+            <a href={project.website} target="_blank" rel="noopener noreferrer">
               <button>Live Demo</button>
             </a>
           </div>
